@@ -1,5 +1,6 @@
 import sys
 def collatz(n):
+    # computes the sequence of numbers produced by the collatz iterative procedure starting at n
     numbersteps = 0
     biggestterm = n
     try:
@@ -22,6 +23,7 @@ def collatz(n):
         sys.exit()
 
 def collatzcounter(n):
+    # implements the collatz iterative procedure starting at n, and prints the biggest term and number of iterations before hitting 1
     numbersteps = 0
     biggestterm = n
     print(str(n) + ' : ', end=' ')
