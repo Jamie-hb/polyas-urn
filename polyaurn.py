@@ -1,19 +1,22 @@
-# simulates drawing balls from Polya's urn
+# simulates drawing balls from Polya's urn. Current code fills the urn with 3 colours, but can easily be adapted to more/less.
+# at each iteration, a ball is drawn and replaced along with another ball of the same colour
 #idea: get code to plot a graph of how many white, black, ... balls at each iteration?
 
 import random
 
-white = 1
+# inital number of balls
+white = 1 
 black = 1
 red = 1
-W = 0 #num of white balls drawn
-B = 0 #num of black balls drawn
-R = 0
-N = 500000 #num of balls drawn
+# number of balls drawn of each colour
+W = 0 
+B = 0 
+R = 0 
+N = 500000 # total number of balls to draw
 
 for i in range(N):
     T = white + black + red
-    p = white / T
+    p = white / T  
     q = red / T
     x = random.uniform(0,1)
     if x <= p:
